@@ -11,8 +11,7 @@ public record Alumno(String id, String nombre, String apellido, EstadoAlumno est
     private static final int EDAD_MAXIMA = 120;
     private static final int LONGITUD_MAXIMA_NOMBRE = 50;
 
-    private static final Pattern PATRON_NOMBRE =
-            Pattern.compile("^[\\p{L}][\\p{L}'\\- ]{0,49}$");
+    private static final Pattern PATRON_NOMBRE = Pattern.compile("^[\\p{L}][\\p{L}'\\- ]{0,49}$");
 
     public Alumno {
         List<String> errores = new ArrayList<>();
