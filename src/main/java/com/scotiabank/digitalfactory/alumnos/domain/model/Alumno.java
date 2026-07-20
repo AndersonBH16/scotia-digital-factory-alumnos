@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 public record Alumno(String id, String nombre, String apellido, EstadoAlumno estado, int edad) {
-    private static final int EDAD_MINIMA = 1;
-    private static final int EDAD_MAXIMA = 120;
-    private static final int LONGITUD_MAXIMA_NOMBRE = 50;
+    private static final int EDAD_MINIMA = 5;
+    private static final int EDAD_MAXIMA = 50;
+    private static final int LONGITUD_MAXIMA_NOMBRE = 70;
 
     private static final Pattern PATRON_NOMBRE = Pattern.compile("^[\\p{L}][\\p{L}'\\- ]{0,49}$");
 

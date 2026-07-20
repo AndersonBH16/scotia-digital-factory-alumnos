@@ -6,8 +6,6 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 public interface AlumnoRepositoryPort {
-    Mono<Boolean> existsById(String id);
-
     Mono<Alumno> save(Alumno alumno);
 
     Flux<Alumno> findByEstado(EstadoAlumno estado);
