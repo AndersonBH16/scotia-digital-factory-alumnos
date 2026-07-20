@@ -70,15 +70,15 @@ class AlumnoTest {
                 .isInstanceOf(AlumnoInvalidoException.class)
                 .satisfies(ex -> {
                     var errores = ((AlumnoInvalidoException) ex).getErrores();
-                    assertThat(errores).hasSize(4); // id, nombre, apellido, estado (edad no se valida más porque los otros ya fallaron... revisar)
+                    assertThat(errores).hasSize(5);
                 });
     }
 
     @Test
     @DisplayName("estaActivo() retorna true solo cuando el estado es ACTIVO")
     void estaActivoRetornaCorrectamente() {
-        Alumno activo = new Alumno("A001", "Ana", "Torres", EstadoAlumno.ACTIVO, 20);
-        Alumno inactivo = new Alumno("A002", "Luis", "Diaz", EstadoAlumno.INACTIVO, 30);
+        Alumno activo = new Alumno("A001", "Lionel", "Messi", EstadoAlumno.ACTIVO, 20);
+        Alumno inactivo = new Alumno("A002", "Cristiano", "Ronaldo", EstadoAlumno.INACTIVO, 30);
 
         assertThat(activo.estaActivo()).isTrue();
         assertThat(inactivo.estaActivo()).isFalse();
