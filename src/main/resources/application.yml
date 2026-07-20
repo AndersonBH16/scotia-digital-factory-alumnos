@@ -14,3 +14,7 @@ management:
 logging:
   level:
     com.scotiabank.digitalfactory.alumnos: DEBUG
+
+app:
+  security:
+    api-key: ${API_KEY:rSLQBaKsix75KyJZGQzmaATwbTP3i4l9}

@@ -6,12 +6,15 @@ import com.scotiabank.digitalfactory.alumnos.infrastructure.adapter.in.web.dto.E
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.bind.support.WebExchangeBindException;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
 
+@RestControllerAdvice
 public class GlobalExceptionHandler {
+
     @ExceptionHandler(AlumnoInvalidoException.class)
     public Mono<ResponseEntity<ErrorResponse>> manejarAlumnoInvalido(AlumnoInvalidoException ex) {
         return Mono.just(ResponseEntity.badRequest()
