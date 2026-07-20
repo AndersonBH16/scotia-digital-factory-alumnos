@@ -1,4 +1,4 @@
-package com.scotiabank.digital_factory_alumnos;
+package com.scotiabank.digitalfactory.alumnos;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

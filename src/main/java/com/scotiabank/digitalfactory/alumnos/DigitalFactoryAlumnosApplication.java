@@ -1,4 +1,4 @@
-package com.scotiabank.digital_factory_alumnos;
+package com.scotiabank.digitalfactory.alumnos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
